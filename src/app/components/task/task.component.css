@@ -1,5 +1,36 @@
-tr.complete td {
+table {
+  width: 100%;
+}
+table tr td, table tr th {
+  padding: 10px;
+}
+table tr.completed td {
   text-decoration: line-through;
+  color: grey;
+}
+
+.center {
+  text-align: center;
+}
+
+.col-id {
+  width: 5%;
+}
+
+.col-name {
+  width: 35%;
+}
+
+.col-category, .col-pririty {
+  width: 15%;
+}
+
+.col-date {
+  width: 20%;
+}
+
+.col-complete {
+  width: 10%;
 }
 
 /*# sourceMappingURL=task.component.css.map */

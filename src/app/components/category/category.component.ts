@@ -11,8 +11,6 @@ export class CategoryComponent implements OnInit {
 
   categoryList: Category[];
 
-  selectedCategory: Category;
-
   constructor(private dataHandler: DataHandlerService) { }
 
   ngOnInit(): void {
@@ -20,12 +18,12 @@ export class CategoryComponent implements OnInit {
   }
 
   private getCategoryList() {
-    this.categoryList = this.dataHandler.getCategoryList();
+    this.dataHandler.getAllCategories().subscribe(category => this.categoryList = category);
   }
 
   showTaskListByCategory(category: Category): void {
-    this.selectedCategory = category;
-    this.dataHandler.fillTaskListByCategory(category);
+    // this.selectedCategory = category;
+    // this.dataHandler.fillTaskListByCategory(category);
   }
 
 }
