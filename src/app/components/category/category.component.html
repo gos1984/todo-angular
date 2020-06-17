@@ -11,7 +11,7 @@
     <ul class="nav">
       <li class="nav-item "
           *ngFor="let category of categoryList"
-          (click)="showTaskListByCategory(category)"
+          (click)="showTaskByCategory(category)"
           [class.active]="category === selectedCategory">
         <a class="nav-link" href="#">
           <i class="material-icons">{{ category.icon }}</i>

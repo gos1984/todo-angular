@@ -1,5 +1,5 @@
 <div class="wrapper ">
-  <app-category></app-category>
+  <app-category [categoryList]="categoryList"></app-category>
   <div class="main-panel">
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
@@ -71,7 +71,7 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col-md-12">
-            <app-task></app-task>
+            <app-task [taskList]="taskList"></app-task>
           </div>
         </div>
       </div>

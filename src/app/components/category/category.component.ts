@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {Category} from '../../common/category';
 import {DataHandlerService} from '../../services/data-handler.service';
 
@@ -9,19 +9,20 @@ import {DataHandlerService} from '../../services/data-handler.service';
 })
 export class CategoryComponent implements OnInit {
 
+  @Input()
   categoryList: Category[];
+  selectedCategory: Category;
 
   constructor(private dataHandler: DataHandlerService) { }
 
   ngOnInit(): void {
-    this.getCategoryList();
   }
 
-  private getCategoryList() {
-    this.dataHandler.getAllCategories().subscribe(category => this.categoryList = category);
-  }
+  // private getCategoryList() {
+  //   this.dataHandler.getAllCategories().subscribe(category => this.categoryList = category);
+  // }
 
-  showTaskListByCategory(category: Category): void {
+  showTaskByCategory(category: Category): void {
     // this.selectedCategory = category;
     // this.dataHandler.fillTaskListByCategory(category);
   }
